@@ -90,6 +90,11 @@ section{padding-block:clamp(64px,9vw,112px)}
 .basket{background:#fff;border-radius:16px;padding:22px 24px;display:grid;gap:4px;border-left:3px solid var(--sage)}
 .basket h3{font-size:21px}
 .basket p{color:var(--muted);font-size:16px}
+.values{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding:0;margin:0;list-style:none}
+.values li{background:#fff;border-radius:16px;padding:26px;display:grid;gap:6px;align-content:start;border-top:3px solid var(--gold);min-width:0}
+.values h3{font-size:24px}
+.values .sub{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text)}
+.values p{color:var(--muted);font-size:16px}
 .isnot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .isnot .card{background:#fff;border-radius:16px;padding:28px;display:grid;gap:12px;align-content:start}
 .isnot h3{font-size:22px}
@@ -111,7 +116,7 @@ section{padding-block:clamp(64px,9vw,112px)}
 .close h2{color:#fff;font-size:clamp(34px,5vw,56px);max-width:16ch}
 .close p{margin-top:16px;max-width:46ch;color:#E3E1D6}
 @media (max-width:900px){
-  .hero .wrap,.kete,.plan,.isnot,.price{grid-template-columns:1fr}
+  .hero .wrap,.kete,.plan,.isnot,.price,.values{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .hero img{max-width:420px}
 }
@@ -180,7 +185,17 @@ section{padding-block:clamp(64px,9vw,112px)}
   </div>
 </div></section>
 
-<section class="stone" aria-labelledby="h-is"><div class="wrap">
+<section class="stone" id="values" aria-labelledby="h-values"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Vision &amp; values</span><h2 id="h-values">The clarity, confidence and agency to flourish on your own terms</h2><p>AHU is an expression of the Te Ahu Solutions vision: people, organisations and whenua that flourish on their own terms, now and for generations to come. AHU brings that vision to each person: the clarity, confidence and agency to flourish on their own terms. Four values guide how it asks, listens and reflects back.</p></div>
+  <ul class="values">
+    <li><h3>Pono</h3><span class="sub">Integrity &amp; accountability</span><p>Be honest with yourself, take responsibility for your words and actions, and have the courage to see what needs to change.</p></li>
+    <li><h3>Manaakitanga</h3><span class="sub">Respect &amp; compassion</span><p>Meet yourself and others with dignity, understanding and compassion. Everyone has their own journey.</p></li>
+    <li><h3>Rangatiratanga</h3><span class="sub">Self-leadership &amp; agency</span><p>Recognise your ability to shape your own path. Own the decisions and actions that move you forward.</p></li>
+    <li><h3>Whakapapa</h3><span class="sub">Connection &amp; belonging</span><p>Understand the connections that shape who you are, so you can choose more consciously where you're heading.</p></li>
+  </ul>
+</div></section>
+
+<section aria-labelledby="h-is"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Knowing what AHU is</span><h2 id="h-is">Support to think, with you in charge</h2></div>
   <div class="isnot">
     <div class="card"><h3>AHU is</h3><ul><li>A self-guidance tool for times of change and uncertainty.</li><li>A private place to organise your thoughts and choose a next step.</li><li>Yours to pause and return to whenever it helps.</li></ul></div>
@@ -189,7 +204,7 @@ section{padding-block:clamp(64px,9vw,112px)}
   <div class="help"><h3>If you need support right now</h3><p>AHU is not equipped to help in a crisis. Free call or text <b>1737</b> any time to talk with a trained counsellor, or call <b>111</b> in an emergency. Outside New Zealand, visit <a href="https://findahelpline.com">findahelpline.com</a>.</p></div>
 </div></section>
 
-<section id="start" aria-labelledby="h-start"><div class="wrap">
+<section class="stone" id="start" aria-labelledby="h-start"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Get started</span><h2 id="h-start">Your first plan is free</h2><p>Take as long as you need with it. There's no time limit.</p></div>
   <div class="price">
     <div class="card first"><h3>Free</h3><p>One Action Plan, with no time limit. Everything you need to see how AHU works for you.</p></div>
@@ -197,7 +212,7 @@ section{padding-block:clamp(64px,9vw,112px)}
   </div>
 </div></section>
 
-<section class="stone" id="why" aria-labelledby="h-why"><div class="wrap founder">
+<section id="why" aria-labelledby="h-why"><div class="wrap founder">
   <img src="assets/melanie-olive-640.jpg" alt="Melanie Sweet, founder of AHU" width="640" height="800">
   <div>
     <span class="eyebrow" id="h-why">Why AHU</span>
