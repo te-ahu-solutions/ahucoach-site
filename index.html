@@ -68,6 +68,41 @@ mark.confirm{background:#F6E3A8;color:inherit;padding:0 3px;border-radius:2px;bo
 .hero .ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:34px}
 .btn{display:inline-block;background:var(--alabaster);color:var(--charcoal);text-decoration:none;font-weight:500;font-size:16px;padding:14px 24px;border-radius:999px}
 .btn:hover{background:#fff}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.btn.gold:hover{background:#D1B062}
+.btn.line{background:transparent;color:var(--charcoal);border:1px solid var(--charcoal)}
+.btn.line:hover{background:#fff}
+.signin{color:#E9E7DD;text-decoration:none;font-size:15px;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 16px;margin-left:8px}
+.signin:hover{border-color:#fff;color:#fff}
+.opening{display:inline-block;font-size:14px;color:var(--muted);border:1px dashed var(--line);border-radius:999px;padding:12px 18px;text-align:center}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+.story blockquote{margin:0;font-family:var(--display);font-size:clamp(20px,2.2vw,25px);line-height:1.5;color:var(--charcoal);border-left:3px solid var(--gold);padding-left:24px}
+.compare{display:grid;gap:12px}
+.compare div{background:#fff;border-radius:16px;padding:20px 24px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:baseline}
+.compare b{font-family:var(--display);font-weight:500;font-size:20px;color:var(--charcoal)}
+.compare span{color:var(--muted)}
+.explore{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.explore .card{background:#fff;border-radius:16px;overflow:hidden;display:grid;align-content:start}
+.explore .card img{aspect-ratio:16/9;object-fit:cover;width:100%;border-radius:0}
+.explore .card div{padding:24px 26px;display:grid;gap:8px}
+.explore h3{font-size:23px}
+.explore p{color:var(--muted)}
+.explore .tags{font-size:14px;color:var(--gold-text)}
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch;max-width:860px}
+.tiers .card{background:#fff;border-radius:16px;padding:20px 22px;display:grid;gap:4px;align-content:start}
+.tiers .what{color:var(--charcoal);font-size:15px;font-weight:500}
+.tiers ul.small{margin:8px 0 0;padding-left:18px;display:grid;gap:3px;font-size:14px;color:var(--muted);line-height:1.5}
+.tiercta{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:28px}
+.tiers .card.feature{border-top:3px solid var(--gold)}
+.tiers h3{font-size:19px}
+.tiers .amt{font-family:var(--display);font-size:26px;color:var(--charcoal);line-height:1.1}
+.tiers .amt small{font-family:var(--body);font-size:15px;color:var(--muted)}
+.tiers ul{margin:0;padding-left:20px;display:grid;gap:6px;color:var(--ink);align-content:start}
+.tiercta .fine{margin:0}
+.fine{font-size:14px;color:var(--muted);margin-top:18px}
+.endcta{background:var(--charcoal);color:#E9E7DD;text-align:center}
+.endcta h2{color:var(--alabaster);font-size:clamp(30px,3.8vw,44px)}
+.endcta .wrap{display:grid;gap:18px;justify-items:center}
 .soon{font-size:14px;color:#BDBBB1;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:12px 18px}
 .hero img{border-radius:18px;aspect-ratio:1/1;object-fit:cover;width:100%}
 section{padding-block:clamp(64px,9vw,112px)}
@@ -87,12 +122,18 @@ section{padding-block:clamp(64px,9vw,112px)}
 .plan li.feature span{color:var(--ink);font-size:17px}
 .plan span{color:var(--muted);font-size:16px}
 .kete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:56px;align-items:start}
-.kete .story{display:grid;gap:16px;max-width:52ch}
+.kete .story{display:grid;grid-template-columns:1fr;gap:16px;max-width:52ch}
 .kete .story h2{font-size:clamp(30px,3.8vw,44px);line-height:1.15}
 .baskets{display:grid;gap:14px}
 .basket{background:#fff;border-radius:16px;padding:22px 24px;display:grid;gap:4px;border-left:3px solid var(--sage)}
 .basket h3{font-size:21px}
 .basket p{color:var(--muted);font-size:16px}
+.sub-h{font-size:24px;margin:44px 0 18px}
+.sec-head + .sub-h{margin-top:0}
+.founder + .sub-h{margin-top:48px}
+.waharoa{font-family:var(--display);font-size:clamp(21px,2.4vw,26px);line-height:1.4;color:var(--charcoal);border-left:3px solid var(--gold);padding-left:20px}
+.practices li{grid-template-columns:200px minmax(0,1fr)}
+.practices b{font-size:18px}
 .values{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding:0;margin:0;list-style:none}
 .values li{background:#fff;border-radius:16px;padding:26px;display:grid;gap:6px;align-content:start;border-top:3px solid var(--gold);min-width:0}
 .values h3{font-size:24px}
@@ -119,7 +160,8 @@ section{padding-block:clamp(64px,9vw,112px)}
 .close h2{color:#fff;font-size:clamp(34px,5vw,56px);max-width:16ch}
 .close p{margin-top:16px;max-width:46ch;color:#E3E1D6}
 @media (max-width:900px){
-  .hero .wrap,.kete,.plan,.isnot,.price,.values{grid-template-columns:1fr}
+  .hero .wrap,.kete,.plan,.isnot,.price,.values,.story,.explore,.tiers{grid-template-columns:1fr}
+  .compare div{grid-template-columns:1fr;gap:4px}
   .steps{grid-template-columns:1fr}
   .hero img{max-width:420px}
 }
@@ -136,7 +178,7 @@ section{padding-block:clamp(64px,9vw,112px)}
   <a class="logo" href="#top" aria-label="AHU, home"><img src="assets/ahu-gold-mark.svg" alt="AHU" width="88" height="34"></a>
   <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
   <nav class="main" id="main-nav" aria-label="Main">
-    <a href="#how">How it works</a><a href="#plan">Your plan</a><a href="#kete">Ngā Kete</a><a href="#why">Why AHU</a><a href="#start">Get started</a>
+    <a href="#how">How it works</a><a href="#plan">Your plan</a><a href="#explore">Explore</a><a href="#why">Why AHU</a><a href="#start">Get started</a>
   </nav>
 </div></header>
 
@@ -148,7 +190,8 @@ section{padding-block:clamp(64px,9vw,112px)}
     <h1>Making sense of what matters.</h1>
     <div class="rule" aria-hidden="true"></div>
     <p class="lead" style="margin-top:22px">A guided coaching experience for the next meaningful step. Answer a small set of questions about what you're experiencing, and leave with a personalised Action Plan you can keep and come back to.</p>
-    <div class="ctas"><a class="btn" href="#how">See how it works</a><span class="soon">Coming soon to Google Play</span></div>
+    <div class="ctas"><a class="btn gold" href="#start">Start your free plan</a><a class="btn" href="#how">See how it works</a></div>
+    <p style="margin-top:14px;font-size:14px;color:#BDBBB1">Launch 20 November 2026. Your first plan is free.</p>
   </div>
   <img src="assets/kawakawa-1100.jpg" alt="Heart-shaped kawakawa leaves" width="1100" height="1085">
 </div></div>
@@ -158,7 +201,7 @@ section{padding-block:clamp(64px,9vw,112px)}
   <ol class="steps">
     <li><h3>Tell AHU what's happening</h3><p>A small set of guided questions, one at a time. Pause whenever you need to and come back later.</p></li>
     <li><h3>Receive your Action Plan</h3><p>AHU shapes what you share into a personal plan. You approve each part, so it fits your life.</p></li>
-    <li><h3>Return and take the next step</h3><p>Come back to your plan, reflect on what's changed, and choose what comes next at your own pace.</p></li>
+    <li><h3>Return and take the next step</h3><p>Come back to your plan and choose what comes next. Inside AHU there's also a place to return to on the days in between.</p></li>
   </ol>
 </div></section>
 
@@ -173,32 +216,52 @@ section{padding-block:clamp(64px,9vw,112px)}
   </ul>
 </div></section>
 
-<section id="kete" aria-labelledby="h-kete"><div class="wrap kete">
-  <div class="story">
-    <span class="eyebrow">Ngā Kete o te Wānanga</span>
-    <h2 id="h-kete">Three baskets of knowledge</h2>
-    <p>The atua Tāne climbed the heavens to bring down three sacred baskets of knowledge for all people. Throughout your life you have already gathered much of this wisdom. Your baskets are never empty.</p>
-    <p>When you begin, AHU invites you to choose the areas you most want to strengthen. It is a starting point you set for yourself.</p>
-  </div>
-  <div class="baskets">
-    <div class="basket"><h3>Te Kete Aronui</h3><p>Mindset, spirit and inner resilience.</p></div>
-    <div class="basket"><h3>Te Kete Tuatea</h3><p>Structure, career and systems.</p></div>
-    <div class="basket"><h3>Te Kete Tuauri</h3><p>Connection, family and aroha.</p></div>
-  </div>
-</div></section>
+<section id="explore" aria-labelledby="h-explore"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Explore</span><h2 id="h-explore">What AHU is built on</h2><p>The values, practices and framework behind every plan. Inside AHU there's more to explore, with extra resources for members.</p></div>
 
-<section class="stone" id="values" aria-labelledby="h-values"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Vision &amp; values</span><h2 id="h-values">The clarity, confidence and agency to flourish on your own terms</h2><p>AHU is an expression of the Te Ahu Solutions vision: people, organisations and whenua that flourish on their own terms, now and for generations to come. AHU brings that vision to each person: the clarity, confidence and agency to flourish on their own terms. Four values guide how it asks, listens and reflects back.</p></div>
+  <h3 class="sub-h">Our values</h3>
   <ul class="values">
     <li><h3>Pono</h3><span class="sub">Integrity &amp; accountability</span><p>Be honest with yourself, take responsibility for your words and actions, and have the courage to see what needs to change.</p></li>
     <li><h3>Manaakitanga</h3><span class="sub">Respect &amp; compassion</span><p>Meet yourself and others with dignity, understanding and compassion. Everyone has their own journey.</p></li>
     <li><h3>Rangatiratanga</h3><span class="sub">Self-leadership &amp; agency</span><p>Recognise your ability to shape your own path. Own the decisions and actions that move you forward.</p></li>
     <li><h3>Whakapapa</h3><span class="sub">Connection &amp; belonging</span><p>Understand the connections that shape who you are, so you can choose more consciously where you're heading.</p></li>
   </ul>
+
+  <h3 class="sub-h">The methodology</h3>
+  <ul class="plan practices">
+    <li><b>Asking the Hard Questions</b><span>Getting past the surface to the assumptions and stories that keep you stuck.</span></li>
+    <li><b>Courageous Conversations</b><span>An honest space to say what's really going on, without skipping the hard parts.</span></li>
+    <li><b>Vortex Extraction</b><span>Stepping outside the emotional storm to see your situation with more calm.</span></li>
+    <li><b>Radical Empathy</b><span>Acknowledging what you're feeling and why it makes sense, before testing your conclusions.</span></li>
+    <li><b>Holding the Mirror</b><span>Reflecting back patterns in your choices and language, without judgement.</span></li>
+    <li><b>Power Reclamation</b><span>Shifting your focus to what's within your control, so you can act.</span></li>
+  </ul>
+
+  <h3 class="sub-h">The framework</h3>
+  <div class="kete">
+    <div class="story">
+      <p class="waharoa">Step through the waharoa, and put the load down.</p>
+      <p>AHU is a digital waharoa: a calm, private space to pause and think clearly before your next step. Restore your worth, reclaim your mana, and find steadiness.</p>
+      <p>It is inspired by Te Ao Māori and Ngā Kete o te Wānanga, the three baskets of knowledge Tāne brought down for all people. Your baskets are never empty. When you begin, you choose the areas you most want to strengthen.</p>
+    </div>
+    <div class="baskets">
+      <div class="basket"><h3>Te Kete Aronui</h3><p>Mindset, spirit and inner resilience.</p></div>
+      <div class="basket"><h3>Te Kete Tuatea</h3><p>Structure, career and systems.</p></div>
+      <div class="basket"><h3>Te Kete Tuauri</h3><p>Connection, family and aroha.</p></div>
+    </div>
+  </div>
 </div></section>
 
-<section aria-labelledby="h-is"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Knowing what AHU is</span><h2 id="h-is">Support to think, with you in charge</h2></div>
+<section class="stone" id="why" aria-labelledby="h-why"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Why AHU</span><h2 id="h-why">The clarity, confidence and agency to flourish on your own terms</h2><p>AHU is an expression of the Te Ahu Solutions vision: people, organisations and whenua that flourish on their own terms, now and for generations to come. AHU brings that vision to each person.</p></div>
+  <div class="founder">
+    <img src="assets/melanie-olive-640.jpg" alt="Melanie Sweet, founder of AHU" width="640" height="800">
+    <div>
+      <blockquote>"Most people don't need a diagnosis. They need a mirror, one clear priority, a behavioural shift, and something steady enough to help them take the next real step toward reclaiming their own power."</blockquote>
+      <p class="who">Melanie Sweet, founder. For Melanie, AHU was about finding her pathway to her roots: the whakapapa that connects her to her tūpuna and whenua.</p>
+    </div>
+  </div>
+  <h3 class="sub-h">Support to think, with you in charge</h3>
   <div class="isnot">
     <div class="card"><h3>AHU is</h3><ul><li>A self-guidance tool for times of change and uncertainty.</li><li>A private place to organise your thoughts and choose a next step.</li><li>Yours to pause and return to whenever it helps.</li></ul></div>
     <div class="card"><h3>AHU is not</h3><ul><li>Therapy, counselling, or a medical or clinical service.</li><li>Legal or financial advice.</li><li>A substitute for professional care when you need it.</li></ul></div>
@@ -206,26 +269,26 @@ section{padding-block:clamp(64px,9vw,112px)}
   <div class="help"><h3>If you need support right now</h3><p>AHU is not equipped to help in a crisis. Free call or text <b>1737</b> any time to talk with a trained counsellor, or call <b>111</b> in an emergency. Outside New Zealand, visit <a href="https://findahelpline.com">findahelpline.com</a>.</p></div>
 </div></section>
 
-<section class="stone" id="start" aria-labelledby="h-start"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Get started</span><h2 id="h-start">Your first plan is free</h2><p>Take as long as you need with it. There's no time limit.</p></div>
-  <div class="price">
-    <div class="card first"><h3>Free</h3><p>One Action Plan, with no time limit. Everything you need to see how AHU works for you.</p></div>
-    <div class="card"><h3>Membership</h3><p>Monthly or annual. Keep up to three active plans at once, so you can work on more than one part of life. Prices are shown in Google Play before you subscribe, and you can cancel any time.</p></div>
+<section id="start" aria-labelledby="h-start"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Get started</span><h2 id="h-start">Your first plan is free</h2><p>No card needed to start. Become a member when you want AHU alongside you for more.</p></div>
+  <div class="tiers">
+    <div class="card"><h3>Free</h3><p class="amt">$0</p><p class="what">Your first Action Plan</p><ul class="small"><li>No card needed, no time limit</li><li>Keep it, download it and come back to it</li></ul></div>
+    <div class="card feature"><h3>Monthly</h3><p class="amt">$27 <small>NZD a month</small></p><p class="what">Membership, month to month</p><ul class="small"><li>As many Action Plans as you need, up to 3 active at a time</li><li>Reminders and check-ins on every plan</li><li>Members-only resources as they're added</li><li>Cancel any time</li></ul></div>
+    <div class="card"><h3>Annual</h3><p class="amt">$270 <small>NZD a year</small></p><p class="what">Two months free</p><ul class="small"><li>Everything in Monthly</li><li>12 months for the price of 10, cancel any time</li></ul></div>
   </div>
+  <div class="tiercta"><a class="btn gold" href="#start">Start your free plan</a><span class="fine">Launch 20 November 2026. Your first plan is free.</span></div>
 </div></section>
 
-<section id="why" aria-labelledby="h-why"><div class="wrap founder">
-  <img src="assets/melanie-olive-640.jpg" alt="Melanie Sweet, founder of AHU" width="640" height="800">
-  <div>
-    <span class="eyebrow" id="h-why">Why AHU</span>
-    <blockquote style="margin-top:16px">"Most people don't need a diagnosis. They need a mirror, one clear priority, a behavioural shift, and something steady enough to help them take the next real step toward reclaiming their own power."</blockquote>
-    <p class="who">Melanie Sweet, founder. For Melanie, AHU was about finding her pathway to her roots: the whakapapa that connects her to her tūpuna and whenua.</p>
-  </div>
+<section class="endcta" aria-labelledby="h-end"><div class="wrap">
+  <span class="eyebrow" style="color:#D9BE7A">AHU Coach</span>
+  <h2 id="h-end">Your next meaningful step starts here</h2>
+  <a class="btn gold" href="#start">Start your free plan</a>
+  <p style="font-size:14px;color:#BDBBB1">Launch 20 November 2026. Your first plan is free.</p>
 </div></section>
 
 <div class="close"><div class="wrap">
   <h2>Begin with what matters.</h2>
-  <p>You remain the author of your plan. Pause, revise or return whenever it feels right.</p>
+  <p>You remain the author of your next step. Pause and return whenever it feels right.</p>
 </div></div>
 
 </main>
