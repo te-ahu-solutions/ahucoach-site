@@ -82,6 +82,9 @@ section{padding-block:clamp(64px,9vw,112px)}
 .plan{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 48px;padding:0;margin:0;list-style:none}
 .plan li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid var(--line)}
 .plan b{font-family:var(--display);font-weight:500;font-size:19px;color:var(--charcoal)}
+.plan li.feature{grid-column:1/-1;background:#fff;border-top:3px solid var(--gold);border-radius:16px;padding:24px 26px;margin-bottom:12px;grid-template-columns:150px minmax(0,1fr)}
+.plan li.feature b{font-size:24px}
+.plan li.feature span{color:var(--ink);font-size:17px}
 .plan span{color:var(--muted);font-size:16px}
 .kete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:56px;align-items:start}
 .kete .story{display:grid;gap:16px;max-width:52ch}
@@ -122,6 +125,7 @@ section{padding-block:clamp(64px,9vw,112px)}
 }
 @media (max-width:600px){
   .plan li{grid-template-columns:1fr;gap:4px}
+  .plan li.feature{grid-template-columns:1fr}
   .founder{grid-template-columns:1fr;gap:24px}
 }
 </style>
@@ -143,7 +147,7 @@ section{padding-block:clamp(64px,9vw,112px)}
     <span class="eyebrow" style="color:#D9BE7A">AHU Coach</span>
     <h1>Making sense of what matters.</h1>
     <div class="rule" aria-hidden="true"></div>
-    <p class="lead" style="margin-top:22px">A guided coaching experience for the next meaningful step. Answer a small set of questions about what you're navigating, and leave with a personalised Action Plan you can keep and come back to.</p>
+    <p class="lead" style="margin-top:22px">A guided coaching experience for the next meaningful step. Answer a small set of questions about what you're experiencing, and leave with a personalised Action Plan you can keep and come back to.</p>
     <div class="ctas"><a class="btn" href="#how">See how it works</a><span class="soon">Coming soon to Google Play</span></div>
   </div>
   <img src="assets/kawakawa-1100.jpg" alt="Heart-shaped kawakawa leaves" width="1100" height="1085">
@@ -159,15 +163,13 @@ section{padding-block:clamp(64px,9vw,112px)}
 </div></section>
 
 <section class="stone" id="plan" aria-labelledby="h-plan"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Your Action Plan</span><h2 id="h-plan">Seven parts, shaped around you</h2><p>Every plan follows the same clear structure, written from what you shared.</p></div>
+  <div class="sec-head"><span class="eyebrow">Your Action Plan</span><h2 id="h-plan">It starts with the Mirror</h2><p>Every plan opens and closes with words written for your situation, never a template. In between, it's clear and simple.</p></div>
   <ul class="plan">
-    <li><b>Opening</b><span>A personal welcome that names what you're navigating.</span></li>
-    <li><b>The Mirror</b><span>A reflection of your situation, so you can see it more clearly.</span></li>
-    <li><b>Priority</b><span>The one thing that deserves your attention now.</span></li>
-    <li><b>Behavioural Shift</b><span>A small change that could make the next step easier.</span></li>
-    <li><b>Three Actions</b><span>Practical, manageable steps you can take.</span></li>
-    <li><b>Accountability</b><span>A gentle way to come back and check in with yourself.</span></li>
-    <li><b>Closing</b><span>Words to carry with you as you move forward.</span></li>
+    <li class="feature"><b>The Mirror</b><span>A reflection of your situation, so you can see it more clearly. Honest, warm, and in plain words.</span></li>
+    <li><b>1 Priority</b><span>The one thing that deserves your attention now.</span></li>
+    <li><b>1 Behavioural Shift</b><span>A small change that could make the next step easier.</span></li>
+    <li><b>3 Actions</b><span>Practical, manageable steps you can take.</span></li>
+    <li><b>1 Accountability</b><span>A clear way to come back and check in with yourself.</span></li>
   </ul>
 </div></section>
 
