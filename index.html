@@ -170,6 +170,20 @@ section{padding-block:clamp(64px,9vw,112px)}
   .plan li.feature{grid-template-columns:1fr}
   .founder{grid-template-columns:1fr;gap:24px}
 }
+
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+.contact h2{font-size:clamp(30px,3.8vw,44px);margin:12px 0 16px}
+.contact .note{margin-top:20px;background:#fff;border-radius:16px;padding:18px 20px;font-size:15px;color:var(--ink)}
+.contact .alt{margin-top:18px;font-size:15px;color:var(--muted)}
+.contact .alt a{color:var(--gold-text)}
+.cform{display:grid;gap:14px;background:#fff;border-radius:16px;padding:26px}
+.cform label{display:grid;gap:6px;font-size:14px;font-weight:500;color:var(--ink)}
+.cform input,.cform textarea,.cform select{font:16px var(--body);color:var(--ink);background:var(--alabaster);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+.cform input:focus,.cform textarea:focus,.cform select:focus{outline:3px solid var(--sage);outline-offset:1px}
+.cform .btn{justify-self:start;border:0;cursor:pointer;font-family:var(--body)}
+.cform .hp{display:none}
+.cform .status{margin:0;font-size:15px;color:var(--ink);min-height:1.4em}
+@media (max-width:760px){.contact{grid-template-columns:1fr;gap:28px}}
 </style>
 </head>
 <body>
@@ -279,6 +293,35 @@ section{padding-block:clamp(64px,9vw,112px)}
   <div class="tiercta"><a class="btn gold" href="#start">Start your free plan</a><span class="fine">Launch 20 November 2026. Your first plan is free. Prices include GST.</span></div>
 </div></section>
 
+<section class="stone" id="contact" aria-labelledby="h-contact"><div class="wrap contact">
+  <div>
+    <span class="eyebrow">Contact</span>
+    <h2 id="h-contact">Get in touch</h2>
+    <p>Questions about AHU, your account or membership, or feedback on your experience. We read every message.</p>
+    <div class="note"><b>AHU can't respond to a crisis.</b> If you need support right now, free call or text <b>1737</b> any time, or call <b>111</b> in an emergency.</div>
+    <p class="alt">Prefer email? <a href="mailto:support@teahusolutions.com">support@teahusolutions.com</a></p>
+  </div>
+  <form class="cform" id="cform" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="7f6b6b27-2bf0-4f53-b5ea-9755d62e6141">
+    <input type="hidden" name="subject" value="New message from ahucoach.com">
+    <input type="hidden" name="from_name" value="AHU Coach website">
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label for="cf-name">Your name<input id="cf-name" name="name" required autocomplete="name"></label>
+    <label for="cf-email">Email<input id="cf-email" name="email" type="email" required autocomplete="email"></label>
+    <label for="cf-topic">What's it about?<select id="cf-topic" name="topic"><option>A question about AHU</option><option>My account or membership</option><option>Feedback</option><option>Something else</option></select></label>
+    <label for="cf-msg">Your message<textarea id="cf-msg" name="message" rows="5" required></textarea></label>
+    <button class="btn gold" type="submit">Send</button>
+    <p class="status" id="cf-status" role="status" aria-live="polite"></p>
+  </form>
+</div></section>
+<script>
+(function(){var f=document.getElementById('cform');if(!f)return;var st=document.getElementById('cf-status');
+f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button');b.disabled=true;st.textContent='Sending…';
+fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)}).then(function(r){return r.json();}).then(function(d){
+if(d.success){f.reset();st.textContent='Thank you. Your message is on its way.';}else{st.textContent='Sorry, that didn\'t send. Please email support@teahusolutions.com.';}
+}).catch(function(){st.textContent='Sorry, that didn\'t send. Please email support@teahusolutions.com.';}).finally(function(){b.disabled=false;});});})();
+</script>
+
 <section class="endcta" aria-labelledby="h-end"><div class="wrap">
   <span class="eyebrow" style="color:#D9BE7A">AHU Coach</span>
   <h2 id="h-end">Your next meaningful step starts here</h2>
@@ -294,7 +337,7 @@ section{padding-block:clamp(64px,9vw,112px)}
 </main>
 <footer><div class="wrap">
   <div><img src="assets/ahu-gold-mark.svg" alt="AHU" width="78" height="30"><p>Making sense of what matters.</p><p class="endorse">AHU is a <a href="https://teahusolutions.com">Te Ahu Solutions</a> product. © Te Ahu Solutions Ltd</p></div>
-  <div><nav aria-label="Footer"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="delete-account.html">Delete your account</a><a href="mailto:support@teahusolutions.com">support@teahusolutions.com</a></nav></div>
+  <div><nav aria-label="Footer"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="delete-account.html">Delete your account</a><a href="./#contact">Contact us</a><a href="mailto:support@teahusolutions.com">support@teahusolutions.com</a></nav></div>
 </div></footer>
 <script>
 (function(){var b=document.getElementById('menu-btn'),n=document.getElementById('main-nav');if(!b||!n)return;
