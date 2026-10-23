@@ -184,6 +184,17 @@ section{padding-block:clamp(64px,9vw,112px)}
 .cform .hp{display:none}
 .cform .status{margin:0;font-size:15px;color:var(--ink);min-height:1.4em}
 @media (max-width:760px){.contact{grid-template-columns:1fr;gap:28px}}
+
+.qa{display:grid;max-width:820px}
+.qa details{border-top:1px solid var(--line)}
+.qa details:last-child{border-bottom:1px solid var(--line)}
+.qa summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-family:var(--display);font-size:clamp(18px,2vw,21px);color:var(--charcoal);position:relative}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";position:absolute;right:6px;top:16px;font-family:var(--body);font-size:26px;color:var(--gold-text)}
+.qa details[open] summary::after{content:"\2212"}
+.qa summary:focus-visible{outline:3px solid var(--sage);outline-offset:2px}
+.qa details p{margin:0 0 22px;max-width:66ch;color:var(--ink)}
+.qa details p a{color:var(--gold-text)}
 </style>
 </head>
 <body>
@@ -293,6 +304,11 @@ section{padding-block:clamp(64px,9vw,112px)}
   <div class="tiercta"><a class="btn gold" href="#start">Start your free plan</a><span class="fine">Launch 20 November 2026. Your first plan is free. Prices include GST.</span></div>
 </div></section>
 
+<section id="questions" aria-labelledby="h-faq"><div class="wrap faq">
+  <div class="sec-head"><span class="eyebrow">Questions</span><h2 id="h-faq">The questions people ask</h2></div>
+  <div class="qa"><details><summary>Is AHU therapy or counselling?</summary><p>No. AHU is a self-guidance tool to help you think through what you're experiencing and choose a next step. It isn't therapy, counselling, or medical, legal or financial advice, and it doesn't diagnose anything. If you need professional support, please reach out to a GP, a counsellor or a helpline like 1737.</p></details><details><summary>Is AHU written by AI?</summary><p>Yes. Your Action Plan is written by AI (Claude, by Anthropic) from your answers, using an approach designed by AHU's founder. You approve each part of your plan, and you stay in charge of what you do with it.</p></details><details><summary>Who can see what I write?</summary><p>Your answers and plans are private to you. We don't sell your information or use it for advertising. Your raw answers are deleted after six months. The one exception is safety: if something you write suggests you may be at risk of harm, an administrator is alerted so we can meet our duty of care. Read the <a href="privacy.html">Privacy Policy</a> for the detail.</p></details><details><summary>What if I'm going through something really hard?</summary><p>AHU will show you support options straight away, and before every set of questions you'll see a safety message. But AHU can't respond to a crisis. If you need support right now, free call or text 1737 any time, or call 111 in an emergency.</p></details><details><summary>Can I change my Action Plan?</summary><p>Plans can't be edited or renamed, so they stay a true record of where you were at. You approve each part as you go, and if things change, you can start a new plan.</p></details><details><summary>Is AHU only for Māori?</summary><p>No. AHU is for anyone aged 18 and over. Its approach is inspired by Te Ao Māori and Ngā Kete o te Wānanga, and everyone is welcome.</p></details><details><summary>Why only three active plans?</summary><p>So you can give each one real attention. When you finish a plan, you can start another. Members can create as many plans as they need over time.</p></details><details><summary>Can I cancel, or get a refund?</summary><p>You can cancel any time in AHU under Settings, then Membership, and you keep access until the end of the period you've paid for. We don't refund part-used months. If you ask within 14 days of your first annual payment, we'll refund it in full. See the <a href="terms.html">Terms of Service</a>.</p></details><details><summary>Where is my information stored?</summary><p>AHU is hosted by Emergent, and your information may be stored outside New Zealand. To write your plan, your answers are processed by Anthropic in the United States. We follow New Zealand's Privacy Act 2020.</p></details></div>
+</div></section>
+
 <section class="stone" id="contact" aria-labelledby="h-contact"><div class="wrap contact">
   <div>
     <span class="eyebrow">Contact</span>
@@ -337,7 +353,7 @@ if(d.success){f.reset();st.textContent='Thank you. Your message is on its way.';
 </main>
 <footer><div class="wrap">
   <div><img src="assets/ahu-gold-mark.svg" alt="AHU" width="78" height="30"><p>Making sense of what matters.</p><p class="endorse">AHU is a <a href="https://teahusolutions.com">Te Ahu Solutions</a> product. © Te Ahu Solutions Ltd</p></div>
-  <div><nav aria-label="Footer"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="delete-account.html">Delete your account</a><a href="./#contact">Contact us</a><a href="mailto:support@teahusolutions.com">support@teahusolutions.com</a></nav></div>
+  <div><nav aria-label="Footer"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="delete-account.html">Delete your account</a><a href="./#questions">Questions</a><a href="./#contact">Contact us</a><a href="mailto:support@teahusolutions.com">support@teahusolutions.com</a></nav></div>
 </div></footer>
 <script>
 (function(){var b=document.getElementById('menu-btn'),n=document.getElementById('main-nav');if(!b||!n)return;
