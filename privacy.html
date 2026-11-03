@@ -38,7 +38,7 @@ p{margin:0}
 header.site{position:sticky;top:0;z-index:50;background:var(--charcoal);padding-top:env(safe-area-inset-top,0px)}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
 header.site .logo img{height:34px;width:auto}
-nav.main{display:flex;gap:28px}
+nav.main{display:flex;gap:28px;align-items:center}
 nav.main a{color:#E9E7DD;text-decoration:none;font-size:15px}
 nav.main a:hover{color:#fff;text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--gold)}
 .menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:4px;padding:8px 12px;font:500 14px var(--body);cursor:pointer}
@@ -50,7 +50,7 @@ footer a{color:#E9E7DD}
 footer .endorse{color:#A9A79D;margin-top:6px}
 footer .endorse a{color:inherit;text-underline-offset:3px}
 @media (max-width:760px){
-  nav.main{display:none;position:absolute;left:0;right:0;top:72px;background:var(--charcoal);flex-direction:column;gap:0;padding:8px max(20px,env(safe-area-inset-left,0px)) 16px}
+  nav.main{display:none;position:absolute;left:0;right:0;top:72px;background:var(--charcoal);flex-direction:column;align-items:stretch;gap:0;padding:8px max(20px,env(safe-area-inset-left,0px)) 16px}
   nav.main.open{display:flex}
   nav.main a{padding:12px 0;border-top:1px solid rgba(255,255,255,.12)}
   .menu-btn{display:block}
@@ -82,7 +82,7 @@ mark.confirm{background:#F6E3A8;color:inherit;padding:0 3px;border-radius:2px;bo
   <a class="logo" href="./" aria-label="AHU, home"><img src="assets/ahu-gold-mark.svg" alt="AHU" width="88" height="34"></a>
   <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
   <nav class="main" id="main-nav" aria-label="Main">
-    <a href="./#how">How it works</a><a href="./#plan">Your plan</a><a href="./#approach">Our approach</a><a href="./#why">Why AHU</a><a href="./#start">Get started</a><a class="signin" href="https://app.ahucoach.com/signin">Sign in</a>
+    <a href="./#how">How it works</a><a href="./#plan">Your plan</a><a href="./#approach">Our approach</a><a href="./#why">Why AHU</a><span class="js"><a href="https://app.ahucoach.com/start">Join AHU</a><span class="sl" aria-hidden="true">/</span><a href="https://app.ahucoach.com/signin">Sign in</a></span>
   </nav>
 </div></header>
 
@@ -171,7 +171,7 @@ mark.confirm{background:#F6E3A8;color:inherit;padding:0 3px;border-radius:2px;bo
 </main>
 <footer><div class="wrap">
   <div><img src="assets/ahu-gold-mark.svg" alt="AHU" width="78" height="30"><p>Making sense of what matters.</p><p class="endorse">© 2026 Te Ahu Solutions Ltd. All rights reserved. AHU is a <a href="https://teahusolutions.com">Te Ahu Solutions</a> product.</p></div>
-  <div><nav aria-label="Footer"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="delete-account.html">Delete your account</a><a href="./#questions">Questions</a><a href="./#contact">Contact us</a><a href="mailto:support@teahusolutions.com">support@teahusolutions.com</a></nav></div>
+  <nav class="flinks" aria-label="Footer"><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="delete-account.html">Delete your account</a></li></ul><ul><li><a href="./#questions">FAQs</a></li><li><a href="./#contact">Contact us</a></li><li><a href="mailto:support@teahusolutions.com">support@teahusolutions.com</a></li></ul></nav>
 </div></footer>
 <script>
 (function(){var b=document.getElementById('menu-btn'),n=document.getElementById('main-nav');if(!b||!n)return;

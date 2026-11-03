@@ -38,7 +38,7 @@ p{margin:0}
 header.site{position:sticky;top:0;z-index:50;background:var(--charcoal);padding-top:env(safe-area-inset-top,0px)}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
 header.site .logo img{height:34px;width:auto}
-nav.main{display:flex;gap:28px}
+nav.main{display:flex;gap:28px;align-items:center}
 nav.main a{color:#E9E7DD;text-decoration:none;font-size:15px}
 nav.main a:hover{color:#fff;text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--gold)}
 .menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:4px;padding:8px 12px;font:500 14px var(--body);cursor:pointer}
@@ -50,7 +50,7 @@ footer a{color:#E9E7DD}
 footer .endorse{color:#A9A79D;margin-top:6px}
 footer .endorse a{color:inherit;text-underline-offset:3px}
 @media (max-width:760px){
-  nav.main{display:none;position:absolute;left:0;right:0;top:72px;background:var(--charcoal);flex-direction:column;gap:0;padding:8px max(20px,env(safe-area-inset-left,0px)) 16px}
+  nav.main{display:none;position:absolute;left:0;right:0;top:72px;background:var(--charcoal);flex-direction:column;align-items:stretch;gap:0;padding:8px max(20px,env(safe-area-inset-left,0px)) 16px}
   nav.main.open{display:flex}
   nav.main a{padding:12px 0;border-top:1px solid rgba(255,255,255,.12)}
   .menu-btn{display:block}
@@ -88,6 +88,19 @@ mark.confirm{background:#F6E3A8;color:inherit;padding:0 3px;border-radius:2px;bo
 .explore h3{font-size:23px}
 .explore p{color:var(--muted)}
 .explore .tags{font-size:14px;color:var(--gold-text)}
+.js{display:inline-flex;align-items:center;gap:8px}
+.js .sl{color:#8F948C}
+.tiers .card{position:relative}
+.tiers .tierbtn{margin-top:16px;justify-self:start;font-size:15px;padding:11px 20px}
+.tiers .badge{position:absolute;top:-11px;right:18px;background:var(--gold);color:var(--ink);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 10px}
+.tiers .card{grid-template-rows:auto auto auto 1fr auto}
+.tiernotes{margin-top:22px;display:grid;gap:4px;font-size:14px;color:var(--muted);max-width:860px}
+.tiernotes p{margin:0}
+.tiernotes b{color:var(--ink);font-weight:500}
+.tiernotes a{color:var(--gold-text)}
+footer .flinks{display:flex;gap:28px;flex-wrap:wrap}
+footer .flinks ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:13px}
+@media (max-width:760px){nav.main .js{display:flex;padding:12px 0;border-top:1px solid rgba(255,255,255,.12)} nav.main .js a{padding:0;border-top:0}}
 .tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch;max-width:860px}
 .tiers .card{background:#fff;border-radius:16px;padding:20px 22px;display:grid;gap:4px;align-content:start}
 .tiers .what{color:var(--charcoal);font-size:15px;font-weight:500}
@@ -203,7 +216,7 @@ section{padding-block:clamp(64px,9vw,112px)}
   <a class="logo" href="#top" aria-label="AHU, home"><img src="assets/ahu-gold-mark.svg" alt="AHU" width="88" height="34"></a>
   <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
   <nav class="main" id="main-nav" aria-label="Main">
-    <a href="#how">How it works</a><a href="#plan">Your plan</a><a href="#approach">Our approach</a><a href="#why">Why AHU</a><a href="#start">Get started</a><a class="signin" href="https://app.ahucoach.com/signin">Sign in</a>
+    <a href="#how">How it works</a><a href="#plan">Your plan</a><a href="#approach">Our approach</a><a href="#why">Why AHU</a><span class="js"><a href="https://app.ahucoach.com/start">Join AHU</a><span class="sl" aria-hidden="true">/</span><a href="https://app.ahucoach.com/signin">Sign in</a></span>
   </nav>
 </div></header>
 
@@ -226,12 +239,12 @@ section{padding-block:clamp(64px,9vw,112px)}
   <ol class="steps">
     <li><h3>Tell AHU what's happening</h3><p>A small set of guided questions, one at a time. Find a quiet moment and take your time.</p></li>
     <li><h3>Receive your Action Plan</h3><p>AHU shapes what you share into a personal plan. You approve each part, so it fits your life.</p></li>
-    <li><h3>Return and take the next step</h3><p>Come back to your plan and choose what comes next. Inside AHU there's also a place to return to on the days in between.</p></li>
+    <li><h3>Return and take the next step</h3><p>Come back to your plan and choose what comes next. AHU encourages a calm, still, safe and nurturing environment for you to process.</p></li>
   </ol>
 </div></section>
 
 <section class="stone" id="plan" aria-labelledby="h-plan"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Your Action Plan</span><h2 id="h-plan">It starts with the Mirror</h2><p>Every plan opens and closes with words written for your situation, never a template. In between, it's clear and simple.</p></div>
+  <div class="sec-head"><span class="eyebrow">Your Action Plan</span><h2 id="h-plan">It starts with the Mirror</h2><p>Every plan opens and closes with words written for your situation, never a template. It's clear and simple.</p></div>
   <ul class="plan">
     <li class="feature"><b>The Mirror</b><span>A reflection of your situation, so you can see it more clearly. Honest, warm, and in plain words.</span></li>
     <li><b>1 Priority</b><span>The one thing that deserves your attention now.</span></li>
@@ -266,8 +279,9 @@ section{padding-block:clamp(64px,9vw,112px)}
   <div class="kete">
     <div class="story">
       <p class="waharoa">Step through the waharoa, and put the load down.</p>
-      <p>AHU is a digital waharoa: a calm, private space to pause and think clearly before your next step. Restore your worth, reclaim your mana, and find steadiness.</p>
-      <p>It is inspired by Te Ao Māori and Ngā Kete o te Wānanga, the three baskets of knowledge Tāne brought down for all people. Your baskets are never empty. When you begin, you choose the areas you most want to strengthen.</p>
+      <p>We have designed AHU to be a digital waharoa: a calm, nurturing and private space to pause and think clearly before your next step. Restore your worth, reclaim your mana, and find steadiness.</p>
+      <p>Inspired by lived experiences, and guided by Te Ao Māori and Ngā Kete o te Wānanga, the three baskets of knowledge Tāne brought down for all people.</p>
+      <p>AHU reminds us that our kete are never empty. When life's challenges arise, we're encouraged to draw on the tools and resources we've gathered through our own life experiences. When you begin, you choose the areas you most want to strengthen.</p>
     </div>
     <div class="baskets">
       <div class="basket"><h3>Te Kete Aronui</h3><p>Mindset, spirit and inner resilience.</p></div>
@@ -282,26 +296,30 @@ section{padding-block:clamp(64px,9vw,112px)}
   <div class="founder">
     <img src="assets/melanie-olive-640.jpg" alt="Melanie Sweet, founder of AHU" width="640" height="800">
     <div>
-      <blockquote>"Most people already know more than they think. What they need is a safe place to pause and reflect, a different perspective, one clear priority, and something steady enough to carry them into the next real step."</blockquote>
+      <blockquote>"Most people don't realise their own potential. When confronted with life's challenges, they need a safe and nurturing place to pause, reflect and gain a different perspective, to focus on what matters, and something steady enough to carry them forward."</blockquote>
       <p class="who">Melanie Sweet, founder. AHU is what Melanie's own learning journey taught her, shared so others can find their footing too. It began with finding her pathway to her roots: the whakapapa that connects her to her tūpuna and whenua.</p>
     </div>
   </div>
   <h3 class="sub-h">AHU supports you to think, with you in charge</h3>
   <div class="isnot">
-    <div class="card"><h3>AHU is</h3><ul><li>A self-guidance tool for times of change and uncertainty.</li><li>A private place to organise your thoughts and choose a next step.</li><li>Yours to return to whenever it helps.</li></ul></div>
+    <div class="card"><h3>AHU is</h3><ul><li>A self-guidance tool for times of change and uncertainty.</li><li>A safe and nurturing place to organise your thoughts and choose a next step.</li><li>Yours to return to whenever it helps.</li></ul></div>
     <div class="card"><h3>AHU is not</h3><ul><li>Therapy, counselling, or a medical or clinical service.</li><li>Legal or financial advice.</li><li>A substitute for professional care when you need it.</li></ul></div>
   </div>
   <div class="help"><h3>If you need support right now</h3><p>AHU is not equipped to help in a crisis. Free call or text <b>1737</b> any time to talk with a trained counsellor, or call <b>111</b> in an emergency. Outside New Zealand, visit <a href="https://findahelpline.com">findahelpline.com</a>.</p></div>
 </div></section>
 
 <section id="start" aria-labelledby="h-start"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Get started</span><h2 id="h-start">Your first plan is free</h2><p>No card needed to start. Become a member when you want AHU alongside you for more.</p></div>
+  <div class="sec-head"><span class="eyebrow">Get started</span><h2 id="h-start">Your first plan is free</h2></div>
   <div class="tiers">
-    <div class="card"><h3>Free</h3><p class="amt">$0</p><p class="what">Your first Action Plan</p><ul class="small"><li>No card needed, no time limit</li><li>Keep it, download it and come back to it</li></ul></div>
-    <div class="card feature"><h3>Monthly</h3><p class="amt">$29 <small>NZD</small></p><ul class="small"><li>As many Action Plans as you need, up to 3 active at a time</li><li>Reminders and check-ins on every plan</li><li>Members-only resources as they're added</li><li>No charge until your first plan is ready</li><li>Cancel any time</li></ul></div>
-    <div class="card"><h3>Annual</h3><p class="amt">$290 <small>NZD</small></p><p class="what">Two months free</p><ul class="small"><li>Everything in Monthly</li><li>12 months for the price of 10, cancel any time</li></ul></div>
+    <div class="card"><h3>Free</h3><p class="amt">$0 <small>/ forever</small></p><p class="what">A first step towards meaningful progress.</p><ul class="small"><li>Your first personalised Action Plan</li><li>No credit card required</li><li>Keep, download and revisit your plan anytime</li></ul><a class="btn gold tierbtn" href="https://app.ahucoach.com/start?plan=free">Start your free plan</a></div>
+    <div class="card"><h3>Monthly Membership</h3><p class="amt">$29 <small>NZD / month</small></p><p class="what">Ongoing support to turn intentions into action.</p><ul class="small"><li>Create as many Action Plans as you need, with up to three active at any time</li><li>Personalised reminders and progress check-ins</li><li>Access to exclusive member resources</li><li>Cancel anytime</li></ul><a class="btn line tierbtn" href="https://app.ahucoach.com/start?plan=monthly">Join monthly</a></div>
+    <div class="card feature"><span class="badge">Best value</span><h3>Annual Membership</h3><p class="amt">$290 <small>NZD / year</small></p><p class="what">A full year of support, with more value built in.</p><ul class="small"><li>Everything included in Monthly Membership</li><li>12 months for the price of 10</li><li>Save $58 over monthly payments</li><li>Cancel your renewal anytime</li></ul><a class="btn line tierbtn" href="https://app.ahucoach.com/start?plan=annual">Join annually</a></div>
   </div>
-  <div class="tiercta"><a class="btn gold" href="#start">Start your free plan</a><span class="fine">Launch 20 November 2026. Your first plan is free. Prices include GST.</span></div>
+  <div class="tiernotes">
+    <p><b>Members:</b> Your membership begins when your first Action Plan is ready. No charge before then.</p>
+    <p>Membership is currently available in New Zealand. All prices include GST.</p>
+    <p><a href="https://app.ahucoach.com/notify">Outside New Zealand? Register your interest for when membership becomes available in your region.</a></p>
+  </div>
 </div></section>
 
 <section id="questions" aria-labelledby="h-faq"><div class="wrap faq">
@@ -313,7 +331,7 @@ section{padding-block:clamp(64px,9vw,112px)}
   <div>
     <span class="eyebrow">Contact</span>
     <h2 id="h-contact">Get in touch</h2>
-    <p>Questions about AHU, your account or membership, or feedback on your experience. We read every message.</p>
+    <p>Questions about AHU, your account or membership, or feedback on your experience.</p>
     <div class="note"><b>AHU can't respond to a crisis.</b> If you need support right now, free call or text <b>1737</b> any time, or call <b>111</b> in an emergency.</div>
     <p class="alt">Prefer email? <a href="mailto:support@teahusolutions.com">support@teahusolutions.com</a></p>
   </div>
@@ -353,7 +371,7 @@ if(d.success){f.reset();st.textContent='Thank you. Your message is on its way.';
 </main>
 <footer><div class="wrap">
   <div><img src="assets/ahu-gold-mark.svg" alt="AHU" width="78" height="30"><p>Making sense of what matters.</p><p class="endorse">© 2026 Te Ahu Solutions Ltd. All rights reserved. AHU is a <a href="https://teahusolutions.com">Te Ahu Solutions</a> product.</p></div>
-  <div><nav aria-label="Footer"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="delete-account.html">Delete your account</a><a href="./#questions">Questions</a><a href="./#contact">Contact us</a><a href="mailto:support@teahusolutions.com">support@teahusolutions.com</a></nav></div>
+  <nav class="flinks" aria-label="Footer"><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="delete-account.html">Delete your account</a></li></ul><ul><li><a href="./#questions">FAQs</a></li><li><a href="./#contact">Contact us</a></li><li><a href="mailto:support@teahusolutions.com">support@teahusolutions.com</a></li></ul></nav>
 </div></footer>
 <script>
 (function(){var b=document.getElementById('menu-btn'),n=document.getElementById('main-nav');if(!b||!n)return;
