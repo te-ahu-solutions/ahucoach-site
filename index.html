@@ -94,13 +94,18 @@ mark.confirm{background:#F6E3A8;color:inherit;padding:0 3px;border-radius:2px;bo
 .tiers .tierbtn{margin-top:16px;justify-self:start;font-size:15px;padding:11px 20px}
 .tiers .badge{position:absolute;top:-11px;right:18px;background:var(--gold);color:var(--ink);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 10px}
 .tiers .card{grid-template-rows:auto auto auto 1fr auto}
+.tiers.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:620px}
+.freeline{margin-top:20px;max-width:620px;background:#fff;border-radius:16px;padding:18px 22px;display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center;justify-content:space-between}
+.freeline p{margin:0;font-size:15px;color:var(--ink)}
+.freeline b{font-weight:500}
+.freeline .btn{font-size:15px;padding:11px 20px}
 .tiernotes{margin-top:22px;display:grid;gap:4px;font-size:14px;color:var(--muted);max-width:860px}
 .tiernotes p{margin:0}
 .tiernotes b{color:var(--ink);font-weight:500}
 .tiernotes a{color:var(--gold-text)}
 footer .flinks{display:flex;gap:28px;flex-wrap:wrap}
 footer .flinks ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:13px}
-@media (max-width:760px){nav.main .js{display:flex;padding:12px 0;border-top:1px solid rgba(255,255,255,.12)} nav.main .js a{padding:0;border-top:0}}
+@media (max-width:760px){.tiers.two{grid-template-columns:1fr} nav.main .js{display:flex;padding:12px 0;border-top:1px solid rgba(255,255,255,.12)} nav.main .js a{padding:0;border-top:0}}
 .tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch;max-width:860px}
 .tiers .card{background:#fff;border-radius:16px;padding:20px 22px;display:grid;gap:4px;align-content:start}
 .tiers .what{color:var(--charcoal);font-size:15px;font-weight:500}
@@ -310,11 +315,11 @@ section{padding-block:clamp(64px,9vw,112px)}
 
 <section id="start" aria-labelledby="h-start"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Get started</span><h2 id="h-start">Your first plan is free</h2></div>
-  <div class="tiers">
-    <div class="card"><h3>Free</h3><p class="amt">$0 <small>/ forever</small></p><p class="what">A first step towards meaningful progress.</p><ul class="small"><li>Your first personalised Action Plan</li><li>No credit card required</li><li>Keep, download and revisit your plan anytime</li></ul><a class="btn gold tierbtn" href="https://app.ahucoach.com/start?plan=free">Start your free plan</a></div>
+  <div class="tiers two">
     <div class="card"><h3>Monthly Membership</h3><p class="amt">$29 <small>NZD / month</small></p><p class="what">Ongoing support to turn intentions into action.</p><ul class="small"><li>Create as many Action Plans as you need, with up to three active at any time</li><li>Personalised reminders and progress check-ins</li><li>Access to exclusive member resources</li><li>Cancel anytime</li></ul><a class="btn line tierbtn" href="https://app.ahucoach.com/start?plan=monthly">Join monthly</a></div>
     <div class="card feature"><span class="badge">Best value</span><h3>Annual Membership</h3><p class="amt">$290 <small>NZD / year</small></p><p class="what">A full year of support, with more value built in.</p><ul class="small"><li>Everything included in Monthly Membership</li><li>12 months for the price of 10</li><li>Save $58 over monthly payments</li><li>Cancel your renewal anytime</li></ul><a class="btn line tierbtn" href="https://app.ahucoach.com/start?plan=annual">Join annually</a></div>
   </div>
+  <div class="freeline"><p><b>Not ready for membership?</b> Your first Action Plan is free, and no payment is taken for it.</p><a class="btn gold" href="https://app.ahucoach.com/start?plan=free">Start your free plan</a></div>
   <div class="tiernotes">
     <p><b>Members:</b> Your membership begins when your first Action Plan is ready. No charge before then.</p>
     <p>Membership is currently available in New Zealand. All prices include GST.</p>
