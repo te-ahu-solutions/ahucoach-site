@@ -152,6 +152,27 @@ section{padding-block:clamp(64px,9vw,112px)}
 .ac-grid p{font-size:15px;color:var(--muted)}
 @media (max-width:860px){.planwrap{grid-template-columns:1fr}}
 @media (max-width:520px){.ac-grid{grid-template-columns:1fr}}
+.wv-intro{margin:-6px 0 22px;color:var(--muted);max-width:56ch}
+.weave{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:0 28px;align-items:start}
+.wv-list{list-style:none;margin:0;padding:0;display:grid;grid-auto-rows:96px}
+.wv-list li{display:grid;gap:2px;align-content:center;border-top:1px solid var(--line);padding:6px 0;cursor:default;outline:none}
+.wv-list li:last-child{border-bottom:1px solid var(--line)}
+.wv-list b{font-family:var(--display);font-weight:500;font-size:19px;color:var(--charcoal)}
+.wv-list span{font-size:14.5px;line-height:1.5;color:var(--muted)}
+.wv-list li.hl b{color:var(--gold-text)}
+.wv-list li:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wv-art{position:relative;height:576px}
+.wv-art svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.wv-art path{fill:none;vector-effect:non-scaling-stroke}
+.wv-art path.h{stroke:var(--alabaster);stroke-width:7;stroke-dasharray:78 100}
+.wv-art path.s{stroke:var(--charcoal);stroke-width:1.6;opacity:.75;transition:opacity .25s,stroke .25s,stroke-width .25s}
+.weave.on path.s{opacity:.18}
+.weave.on path.s.hl{opacity:1;stroke:var(--gold);stroke-width:3}
+.wv-end{position:absolute;top:50%;transform:translate(-7px,-50%);display:flex;align-items:center;gap:12px}
+.wv-end .dot{width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px rgba(195,159,71,.18)}
+.wv-end .lbl{font-family:var(--display);font-size:18px;color:var(--charcoal);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.wv-art path.s{transition:none}}
+@media (max-width:860px){.weave{grid-template-columns:1fr}.wv-art{display:none}.wv-list{grid-auto-rows:auto}.wv-list li{padding:16px 0}}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s;padding:0;margin:0;list-style:none}
 .steps li{background:#fff;border-radius:16px;padding:28px;display:grid;gap:10px;align-content:start;min-width:0}
 .steps li::before{counter-increment:s;content:counter(s);font-family:var(--display);font-size:30px;color:var(--gold-text);line-height:1}
@@ -306,14 +327,21 @@ section{padding-block:clamp(64px,9vw,112px)}
   </ul>
 
   <h3 class="sub-h">Our practices</h3>
-  <ul class="plan practices">
-    <li><b>Asking the Hard Questions</b><span>Getting past the surface to the assumptions and stories that keep you stuck.</span></li>
-    <li><b>Courageous Conversations</b><span>An honest space to say what's really going on, without skipping the hard parts.</span></li>
-    <li><b>Vortex Extraction</b><span>Stepping outside the emotional storm to see your situation with more calm.</span></li>
-    <li><b>Radical Empathy</b><span>Acknowledging what you're feeling and why it makes sense, before testing your conclusions.</span></li>
-    <li><b>Holding the Mirror</b><span>Reflecting back patterns in your choices and language, without judgement.</span></li>
-    <li><b>Power Reclamation</b><span>Shifting your focus to what's within your control, so you can act.</span></li>
-  </ul>
+  <p class="wv-intro">Six practices, woven together into one plan. Each one strengthens the others.</p>
+  <div class="weave" id="weave">
+    <ol class="wv-list"><li data-i="0"><b>Asking the Hard Questions</b><span>Getting past the surface to the assumptions and stories that keep you stuck.</span></li><li data-i="1"><b>Courageous Conversations</b><span>An honest space to say what's really going on, without skipping the hard parts.</span></li><li data-i="2"><b>Vortex Extraction</b><span>Stepping outside the emotional storm to see your situation with more calm.</span></li><li data-i="3"><b>Radical Empathy</b><span>Acknowledging what you're feeling and why it makes sense, before testing your conclusions.</span></li><li data-i="4"><b>Holding the Mirror</b><span>Reflecting back patterns in your choices and language, without judgement.</span></li><li data-i="5"><b>Power Reclamation</b><span>Shifting your focus to what's within your control, so you can act.</span></li></ol>
+    <div class="wv-art" aria-hidden="true">
+      <svg viewBox="0 0 1000 576" preserveAspectRatio="none"><path class="h" pathLength="100" d="M0,48 C150,48 230,336 380,336 C520,336 600,245 780,288"/><path class="s" data-i="0" d="M0,48 C150,48 230,336 380,336 C520,336 600,245 780,288"/><path class="h" pathLength="100" d="M0,144 C150,144 230,528 380,528 C520,528 600,262 780,288"/><path class="s" data-i="1" d="M0,144 C150,144 230,528 380,528 C520,528 600,262 780,288"/><path class="h" pathLength="100" d="M0,240 C150,240 230,432 380,432 C520,432 600,279 780,288"/><path class="s" data-i="2" d="M0,240 C150,240 230,432 380,432 C520,432 600,279 780,288"/><path class="h" pathLength="100" d="M0,336 C150,336 230,144 380,144 C520,144 600,297 780,288"/><path class="s" data-i="3" d="M0,336 C150,336 230,144 380,144 C520,144 600,297 780,288"/><path class="h" pathLength="100" d="M0,432 C150,432 230,48 380,48 C520,48 600,314 780,288"/><path class="s" data-i="4" d="M0,432 C150,432 230,48 380,48 C520,48 600,314 780,288"/><path class="h" pathLength="100" d="M0,528 C150,528 230,240 380,240 C520,240 600,331 780,288"/><path class="s" data-i="5" d="M0,528 C150,528 230,240 380,240 C520,240 600,331 780,288"/></svg>
+      <div class="wv-end" style="left:78.0%"><span class="dot"></span><span class="lbl">Your Action Plan</span></div>
+    </div>
+  </div>
+  <script>
+  (function(){var w=document.getElementById('weave');if(!w)return;
+  w.querySelectorAll('.wv-list li').forEach(function(li){var i=li.getAttribute('data-i');
+    var svg=w.querySelector('svg');function on(){w.classList.add('on');w.querySelectorAll('path.s').forEach(function(p){var h=p.getAttribute('data-i')===i;p.classList.toggle('hl',h);if(h)svg.appendChild(p);});li.classList.add('hl');}
+    function off(){w.classList.remove('on');w.querySelectorAll('.hl').forEach(function(e){e.classList.remove('hl');});}
+    li.addEventListener('mouseenter',on);li.addEventListener('mouseleave',off);li.addEventListener('focus',on);li.addEventListener('blur',off);li.tabIndex=0;});})();
+  </script>
 
   <h3 class="sub-h">Our roots</h3>
   <div class="kete">
