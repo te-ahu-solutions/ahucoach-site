@@ -258,6 +258,16 @@ section{padding-block:clamp(64px,9vw,112px)}
 .qa summary:focus-visible{outline:3px solid var(--sage);outline-offset:2px}
 .qa details p{margin:0 0 22px;max-width:66ch;color:var(--ink)}
 .qa details p a{color:var(--gold-text)}
+.isnot2{background:#fff;border-radius:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.in-col{padding:32px 36px}
+.in-col.not{border-left:1px solid var(--line)}
+.in-lbl{display:block;font-family:Fraunces,serif;font-size:22px;color:var(--ink);margin-bottom:10px}
+.in-col ul{list-style:none;margin:0;padding:0}
+.in-col li{position:relative;padding:14px 0 14px 26px;border-top:1px solid var(--line)}
+.in-col li::before{content:"";position:absolute;left:1px;top:23px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.in-col.not li{color:var(--muted)}
+.in-col.not li::before{width:10px;height:1.5px;border-radius:0;background:var(--muted);top:26px}
+@media (max-width:760px){.isnot2{grid-template-columns:1fr}.in-col{padding:26px 22px}.in-col.not{border-left:0;border-top:1px solid var(--line)}}
 </style>
 </head>
 <body>
@@ -367,10 +377,10 @@ section{padding-block:clamp(64px,9vw,112px)}
       <p class="who">Melanie Sweet, founder. AHU is what Melanie's own learning journey taught her, shared so others can find their footing too. It began with finding her pathway to her roots: the whakapapa that connects her to her tūpuna and whenua.</p>
     </div>
   </div>
-  <h3 class="sub-h">AHU supports you to think, with you in charge</h3>
-  <div class="isnot">
-    <div class="card"><h3>AHU is</h3><ul><li>A self-guidance tool for times of change and uncertainty.</li><li>A safe and nurturing place to organise your thoughts and choose a next step.</li><li>Yours to return to whenever it helps.</li></ul></div>
-    <div class="card"><h3>AHU is not</h3><ul><li>Therapy, counselling, or a medical or clinical service.</li><li>Legal or financial advice.</li><li>A substitute for professional care when you need it.</li></ul></div>
+  <h3 class="sub-h">AHU supports your thinking. You stay in charge.</h3>
+  <div class="isnot2">
+    <div class="in-col"><span class="in-lbl">AHU is</span><ul><li>A calm place to pause when life gets heavy.</li><li>A self-guided way to see clearly and choose your next step.</li><li>Yours to come back to, whenever you need it.</li></ul></div>
+    <div class="in-col not"><span class="in-lbl">AHU is not</span><ul><li>Therapy, counselling, or a medical or clinical service.</li><li>Legal or financial advice.</li><li>A substitute for professional care when you need it.</li></ul></div>
   </div>
   <div class="help"><h3>If you need support right now</h3><p>AHU is not equipped to help in a crisis. Free call or text <b>1737</b> any time to talk with a trained counsellor, or call <b>111</b> in an emergency. Outside New Zealand, visit <a href="https://findahelpline.com">findahelpline.com</a>.</p></div>
 </div></section>
