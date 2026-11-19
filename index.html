@@ -128,6 +128,51 @@ section{padding-block:clamp(64px,9vw,112px)}
 .sec-head{max-width:640px;display:grid;gap:12px;margin-bottom:44px}
 .sec-head h2{font-size:clamp(30px,3.8vw,44px);line-height:1.15}
 .sec-head p{color:var(--muted)}
+.how{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,88px);align-items:start}
+.how-head{display:grid;gap:16px;position:sticky;top:110px}
+.how-head h2{font-size:clamp(30px,3.8vw,46px);line-height:1.12}
+.how-head p{color:var(--muted);max-width:36ch}
+.steps2{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--line)}
+.steps2 li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:20px;padding:30px 0;border-bottom:1px solid var(--line)}
+.steps2 .sn{font-family:var(--display);font-size:15px;letter-spacing:.14em;color:var(--gold-text);padding-top:6px;font-variant-numeric:tabular-nums}
+.steps2 h3{font-size:clamp(22px,2.2vw,26px);line-height:1.25;margin-bottom:8px}
+.steps2 p{color:var(--ink);max-width:52ch}
+@media (max-width:860px){.how{grid-template-columns:1fr}.how-head{position:static}.steps2 li{grid-template-columns:52px minmax(0,1fr);gap:12px;padding:24px 0}}
+.planwrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,88px);align-items:start}
+.ahucard{background:#fff;border-radius:16px;box-shadow:0 1px 0 var(--line),0 22px 44px -30px rgba(46,50,45,.4);padding:clamp(24px,3vw,36px);display:grid;gap:20px}
+.ac-head{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);padding-bottom:14px;border-bottom:1px solid var(--line)}
+.ac-dot{width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.ac-mirror{background:var(--alabaster);border-left:3px solid var(--gold);border-radius:6px;padding:18px 20px;display:grid;gap:6px}
+.ac-mirror b{font-family:var(--display);font-weight:500;font-size:24px;color:var(--charcoal)}
+.ac-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px}
+.ac-grid > div{display:flex;gap:12px;align-items:flex-start}
+.ac-grid .n{font-family:var(--display);font-size:40px;line-height:1;color:var(--charcoal);font-weight:500;min-width:24px}
+.ac-grid .t{display:grid;gap:4px;padding-top:8px;min-width:0}
+.ac-grid b{font-family:var(--display);font-weight:500;font-size:19px;color:var(--charcoal)}
+.ac-grid p{font-size:15px;color:var(--muted)}
+@media (max-width:860px){.planwrap{grid-template-columns:1fr}}
+@media (max-width:520px){.ac-grid{grid-template-columns:1fr}}
+.wv-intro{margin:-6px 0 22px;color:var(--muted);max-width:56ch}
+.weave{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:0 28px;align-items:start}
+.wv-list{list-style:none;margin:0;padding:0;display:grid;grid-auto-rows:96px}
+.wv-list li{display:grid;gap:2px;align-content:center;border-top:1px solid var(--line);padding:6px 0;cursor:default;outline:none}
+.wv-list li:last-child{border-bottom:1px solid var(--line)}
+.wv-list b{font-family:var(--display);font-weight:500;font-size:19px;color:var(--charcoal)}
+.wv-list span{font-size:14.5px;line-height:1.5;color:var(--muted)}
+.wv-list li b{transition:color .25s}.wv-list li.hl b{color:var(--t,var(--gold-text))}
+.wv-list li:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wv-art{position:relative;height:576px}
+.wv-art svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.wv-art path{fill:none;vector-effect:non-scaling-stroke}
+.wv-art path.h{stroke:var(--alabaster);stroke-width:11;stroke-dasharray:78 100}
+.wv-art path.s{stroke:var(--c);stroke-width:4;stroke-linecap:round;transition:opacity .25s,stroke-width .25s}
+.weave.on path.s{opacity:.18}
+.weave.on path.s.hl{opacity:1;stroke-width:6}
+.wv-end{position:absolute;top:50%;transform:translate(-7px,-50%);display:flex;align-items:center;gap:12px}
+.wv-end .dot{width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px rgba(195,159,71,.18)}
+.wv-end .lbl{font-family:var(--display);font-size:18px;color:var(--charcoal);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.wv-art path.s{transition:none}}
+@media (max-width:860px){.weave{grid-template-columns:1fr}.wv-art{display:none}.wv-list{grid-auto-rows:auto}.wv-list li{padding:16px 0}}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s;padding:0;margin:0;list-style:none}
 .steps li{background:#fff;border-radius:16px;padding:28px;display:grid;gap:10px;align-content:start;min-width:0}
 .steps li::before{counter-increment:s;content:counter(s);font-family:var(--display);font-size:30px;color:var(--gold-text);line-height:1}
@@ -239,24 +284,35 @@ section{padding-block:clamp(64px,9vw,112px)}
   <img src="assets/kawakawa-1100.jpg" alt="Heart-shaped kawakawa leaves" width="1100" height="1085">
 </div></div>
 
-<section id="how" aria-labelledby="h-how"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">How it works</span><h2 id="h-how">A conversation that gives context. A plan that gives shape.</h2></div>
-  <ol class="steps">
-    <li><h3>Tell AHU what's happening</h3><p>A small set of guided questions, one at a time. Find a quiet moment and take your time.</p></li>
-    <li><h3>Receive your Action Plan</h3><p>AHU shapes what you share into a personal plan. You approve each part, so it fits your life.</p></li>
-    <li><h3>Return and take the next step</h3><p>Come back to your plan and choose what comes next. AHU encourages a calm, still, safe and nurturing environment for you to process.</p></li>
+<section id="how" aria-labelledby="h-how"><div class="wrap how">
+  <div class="how-head">
+    <span class="eyebrow">How it works</span>
+    <h2 id="h-how">A conversation that gives context. A plan that gives shape.</h2>
+    <p>Three steps, at your own pace, in a space that is calm, private and yours.</p>
+  </div>
+  <ol class="steps2">
+    <li><span class="sn">01</span><div><h3>Share what's happening</h3><p>A short set of guided questions, one at a time. Take a quiet moment and answer in your own words.</p></div></li>
+    <li><span class="sn">02</span><div><h3>Receive your Action Plan</h3><p>AHU shapes what you share into a plan written for your situation. You approve each part, so it fits your life.</p></div></li>
+    <li><span class="sn">03</span><div><h3>Return and take the next step</h3><p>Come back to your plan whenever you need. A calm, safe and nurturing space to reflect and choose what comes next.</p></div></li>
   </ol>
 </div></section>
 
-<section class="stone" id="plan" aria-labelledby="h-plan"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Your Action Plan</span><h2 id="h-plan">It starts with the Mirror</h2><p>Every plan opens and closes with words written for your situation, never a template. It's clear and simple.</p></div>
-  <ul class="plan">
-    <li class="feature"><b>The Mirror</b><span>A reflection of your situation, so you can see it more clearly. Honest, warm, and in plain words.</span></li>
-    <li><b>1 Priority</b><span>The one thing that deserves your attention now.</span></li>
-    <li><b>1 Behavioural Shift</b><span>A small change that could make the next step easier.</span></li>
-    <li><b>3 Actions</b><span>Practical, manageable steps you can take.</span></li>
-    <li><b>1 Accountability</b><span>A clear way to come back and check in with yourself.</span></li>
-  </ul>
+<section class="stone" id="plan" aria-labelledby="h-plan"><div class="wrap planwrap">
+  <div class="how-head">
+    <span class="eyebrow">Your Action Plan</span>
+    <h2 id="h-plan">Clear enough to act on. Simple enough to keep.</h2>
+    <p>Written for your situation, never a template, and focused on what matters most right now.</p>
+  </div>
+  <div class="ahucard" aria-label="What's in an AHU Action Plan">
+    <div class="ac-head"><span>AHU Action Plan</span><span class="ac-dot" aria-hidden="true"></span></div>
+    <div class="ac-mirror"><b>The Mirror</b><p>A reflection of your situation, so you can see it more clearly. Honest, warm and in plain words.</p></div>
+    <div class="ac-grid">
+      <div><span class="n">1</span><span class="t"><b>Priority</b><p>The one thing that deserves your attention now.</p></span></div>
+      <div><span class="n">1</span><span class="t"><b>Behavioural Shift</b><p>A small change that could make the next step easier.</p></span></div>
+      <div><span class="n">3</span><span class="t"><b>Actions</b><p>Practical, manageable steps you can take.</p></span></div>
+      <div><span class="n">1</span><span class="t"><b>Accountability</b><p>A clear way to come back and check in with yourself.</p></span></div>
+    </div>
+  </div>
 </div></section>
 
 <section id="approach" aria-labelledby="h-approach"><div class="wrap">
@@ -271,14 +327,21 @@ section{padding-block:clamp(64px,9vw,112px)}
   </ul>
 
   <h3 class="sub-h">Our practices</h3>
-  <ul class="plan practices">
-    <li><b>Asking the Hard Questions</b><span>Getting past the surface to the assumptions and stories that keep you stuck.</span></li>
-    <li><b>Courageous Conversations</b><span>An honest space to say what's really going on, without skipping the hard parts.</span></li>
-    <li><b>Vortex Extraction</b><span>Stepping outside the emotional storm to see your situation with more calm.</span></li>
-    <li><b>Radical Empathy</b><span>Acknowledging what you're feeling and why it makes sense, before testing your conclusions.</span></li>
-    <li><b>Holding the Mirror</b><span>Reflecting back patterns in your choices and language, without judgement.</span></li>
-    <li><b>Power Reclamation</b><span>Shifting your focus to what's within your control, so you can act.</span></li>
-  </ul>
+  <p class="wv-intro">Six practices, woven together into one plan. Each one strengthens the others.</p>
+  <div class="weave" id="weave">
+    <ol class="wv-list"><li data-i="0" style="--t:#A9852F"><b>Asking the Hard Questions</b><span>Getting past the surface to the assumptions and stories that keep you stuck.</span></li><li data-i="1" style="--t:#424741"><b>Courageous Conversations</b><span>An honest space to say what's really going on, without skipping the hard parts.</span></li><li data-i="2" style="--t:#6E8466"><b>Vortex Extraction</b><span>Stepping outside the emotional storm to see your situation with more calm.</span></li><li data-i="3" style="--t:#8A6E2C"><b>Radical Empathy</b><span>Acknowledging what you're feeling and why it makes sense, before testing your conclusions.</span></li><li data-i="4" style="--t:#8C7A57"><b>Holding the Mirror</b><span>Reflecting back patterns in your choices and language, without judgement.</span></li><li data-i="5" style="--t:#5A6D52"><b>Power Reclamation</b><span>Shifting your focus to what's within your control, so you can act.</span></li></ol>
+    <div class="wv-art" aria-hidden="true">
+      <svg viewBox="0 0 1000 576" preserveAspectRatio="none"><path class="h" pathLength="100" d="M0,48 C150,48 230,336 380,336 C520,336 600,245 780,288"/><path class="s" data-i="0" style="--c:#C39F47" d="M0,48 C150,48 230,336 380,336 C520,336 600,245 780,288"/><path class="h" pathLength="100" d="M0,144 C150,144 230,528 380,528 C520,528 600,262 780,288"/><path class="s" data-i="1" style="--c:#424741" d="M0,144 C150,144 230,528 380,528 C520,528 600,262 780,288"/><path class="h" pathLength="100" d="M0,240 C150,240 230,432 380,432 C520,432 600,279 780,288"/><path class="s" data-i="2" style="--c:#97AA8E" d="M0,240 C150,240 230,432 380,432 C520,432 600,279 780,288"/><path class="h" pathLength="100" d="M0,336 C150,336 230,144 380,144 C520,144 600,297 780,288"/><path class="s" data-i="3" style="--c:#8A6E2C" d="M0,336 C150,336 230,144 380,144 C520,144 600,297 780,288"/><path class="h" pathLength="100" d="M0,432 C150,432 230,48 380,48 C520,48 600,314 780,288"/><path class="s" data-i="4" style="--c:#B8A98A" d="M0,432 C150,432 230,48 380,48 C520,48 600,314 780,288"/><path class="h" pathLength="100" d="M0,528 C150,528 230,240 380,240 C520,240 600,331 780,288"/><path class="s" data-i="5" style="--c:#6E8166" d="M0,528 C150,528 230,240 380,240 C520,240 600,331 780,288"/></svg>
+      <div class="wv-end" style="left:78.0%"><span class="dot"></span><span class="lbl">Your Action Plan</span></div>
+    </div>
+  </div>
+  <script>
+  (function(){var w=document.getElementById('weave');if(!w)return;
+  w.querySelectorAll('.wv-list li').forEach(function(li){var i=li.getAttribute('data-i');
+    var svg=w.querySelector('svg');function on(){w.classList.add('on');w.querySelectorAll('path.s').forEach(function(p){var h=p.getAttribute('data-i')===i;p.classList.toggle('hl',h);if(h)svg.appendChild(p);});li.classList.add('hl');}
+    function off(){w.classList.remove('on');w.querySelectorAll('.hl').forEach(function(e){e.classList.remove('hl');});}
+    li.addEventListener('mouseenter',on);li.addEventListener('mouseleave',off);li.addEventListener('focus',on);li.addEventListener('blur',off);li.tabIndex=0;});})();
+  </script>
 
   <h3 class="sub-h">Our roots</h3>
   <div class="kete">
