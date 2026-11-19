@@ -128,6 +128,16 @@ section{padding-block:clamp(64px,9vw,112px)}
 .sec-head{max-width:640px;display:grid;gap:12px;margin-bottom:44px}
 .sec-head h2{font-size:clamp(30px,3.8vw,44px);line-height:1.15}
 .sec-head p{color:var(--muted)}
+.how{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,88px);align-items:start}
+.how-head{display:grid;gap:16px;position:sticky;top:110px}
+.how-head h2{font-size:clamp(30px,3.8vw,46px);line-height:1.12}
+.how-head p{color:var(--muted);max-width:36ch}
+.steps2{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--line)}
+.steps2 li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:20px;padding:30px 0;border-bottom:1px solid var(--line)}
+.steps2 .sn{font-family:var(--display);font-size:15px;letter-spacing:.14em;color:var(--gold-text);padding-top:6px;font-variant-numeric:tabular-nums}
+.steps2 h3{font-size:clamp(22px,2.2vw,26px);line-height:1.25;margin-bottom:8px}
+.steps2 p{color:var(--ink);max-width:52ch}
+@media (max-width:860px){.how{grid-template-columns:1fr}.how-head{position:static}.steps2 li{grid-template-columns:52px minmax(0,1fr);gap:12px;padding:24px 0}}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s;padding:0;margin:0;list-style:none}
 .steps li{background:#fff;border-radius:16px;padding:28px;display:grid;gap:10px;align-content:start;min-width:0}
 .steps li::before{counter-increment:s;content:counter(s);font-family:var(--display);font-size:30px;color:var(--gold-text);line-height:1}
@@ -239,12 +249,16 @@ section{padding-block:clamp(64px,9vw,112px)}
   <img src="assets/kawakawa-1100.jpg" alt="Heart-shaped kawakawa leaves" width="1100" height="1085">
 </div></div>
 
-<section id="how" aria-labelledby="h-how"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">How it works</span><h2 id="h-how">A conversation that gives context. A plan that gives shape.</h2></div>
-  <ol class="steps">
-    <li><h3>Tell AHU what's happening</h3><p>A small set of guided questions, one at a time. Find a quiet moment and take your time.</p></li>
-    <li><h3>Receive your Action Plan</h3><p>AHU shapes what you share into a personal plan. You approve each part, so it fits your life.</p></li>
-    <li><h3>Return and take the next step</h3><p>Come back to your plan and choose what comes next. AHU encourages a calm, still, safe and nurturing environment for you to process.</p></li>
+<section id="how" aria-labelledby="h-how"><div class="wrap how">
+  <div class="how-head">
+    <span class="eyebrow">How it works</span>
+    <h2 id="h-how">A conversation that gives context. A plan that gives shape.</h2>
+    <p>Three steps, at your own pace, in a space that is calm, private and yours.</p>
+  </div>
+  <ol class="steps2">
+    <li><span class="sn">01</span><div><h3>Share what's happening</h3><p>A short set of guided questions, one at a time. Take a quiet moment and answer in your own words.</p></div></li>
+    <li><span class="sn">02</span><div><h3>Receive your Action Plan</h3><p>AHU shapes what you share into a plan written for your situation. You approve each part, so it fits your life.</p></div></li>
+    <li><span class="sn">03</span><div><h3>Return and take the next step</h3><p>Come back to your plan whenever you need. A calm, safe and nurturing space to reflect and choose what comes next.</p></div></li>
   </ol>
 </div></section>
 
