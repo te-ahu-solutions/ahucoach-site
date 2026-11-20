@@ -291,6 +291,21 @@ section{padding-block:clamp(64px,9vw,112px)}
 .begin p + p{margin-top:12px;color:#E3E1D6;max-width:34ch}
 .start-col .tiers.two,.start-col .freeline,.start-col .tiernotes{max-width:none}
 @media (max-width:960px){.start-grid{grid-template-columns:1fr}.begin{min-height:260px}}
+.xlist{display:grid;gap:14px;margin-top:40px}
+.xbox{background:#fff;border:1px solid var(--line);border-radius:14px}
+.xbox summary{list-style:none;cursor:pointer;padding:26px 72px 26px 32px;position:relative;display:grid;gap:6px}
+.xbox summary::-webkit-details-marker{display:none}
+.xb-t{font-family:Fraunces,serif;font-size:clamp(24px,2.6vw,30px);color:var(--charcoal);line-height:1.2}
+.xb-h{color:var(--muted)}
+.xbox summary::after{content:"+";position:absolute;right:30px;top:50%;transform:translateY(-50%);font-size:32px;color:var(--gold-text)}
+.xbox[open] summary::after{content:"\2212"}
+.xbox summary:focus-visible{outline:3px solid var(--sage);outline-offset:2px}
+.xb-body{padding:8px 32px 32px;border-top:1px solid var(--line);margin:0 32px;padding-left:0;padding-right:0}
+.xb-body > *:first-child{margin-top:24px}
+.xbox .values li{background:var(--alabaster)}
+.xbox .basket{background:var(--alabaster)}
+@media (max-width:760px){.xbox summary{padding:22px 56px 22px 20px}.xb-body{margin:0 20px}}
+.xbox .wv-art path.h{stroke:#fff}
 </style>
 </head>
 <body>
@@ -357,17 +372,15 @@ section{padding-block:clamp(64px,9vw,112px)}
     </div>
   </div>
 
-  <h3 class="sub-h">Our values</h3>
-  <ul class="values">
+  <div class="xlist">
+    <details class="xbox"><summary><span class="xb-t">Our values</span><span class="xb-h">Pono, Manaakitanga, Rangatiratanga and Whakapapa</span></summary><div class="xb-body"><ul class="values">
     <li><h3>Pono</h3><span class="sub">Integrity &amp; accountability</span><p>Be honest with yourself, take responsibility for your words and actions, and have the courage to see what needs to change.</p></li>
     <li><h3>Manaakitanga</h3><span class="sub">Respect &amp; compassion</span><p>Meet yourself and others with dignity, understanding and compassion. Everyone has their own journey.</p></li>
     <li><h3>Rangatiratanga</h3><span class="sub">Self-leadership &amp; agency</span><p>Recognise your ability to shape your own path. Own the decisions and actions that move you forward.</p></li>
     <li><h3>Whakapapa</h3><span class="sub">Connection &amp; belonging</span><p>Understand the connections that shape who you are, so you can choose more consciously where you're heading.</p></li>
   </ul>
-
-  <h3 class="sub-h">Our practices</h3>
-  <p class="wv-intro">Six practices, woven together into one plan. Each one strengthens the others.</p>
-  <div class="weave" id="weave">
+    </div></details>
+    <details class="xbox"><summary><span class="xb-t">Our practices</span><span class="xb-h">Six practices, woven together into one plan. Each one strengthens the others.</span></summary><div class="xb-body"><div class="weave" id="weave">
     <ol class="wv-list"><li data-i="0" style="--t:#A9852F"><b>Asking the Hard Questions</b><span>Getting past the surface to the assumptions and stories that keep you stuck.</span></li><li data-i="1" style="--t:#424741"><b>Courageous Conversations</b><span>An honest space to say what's really going on, without skipping the hard parts.</span></li><li data-i="2" style="--t:#6E8466"><b>Vortex Extraction</b><span>Stepping outside the emotional storm to see your situation with more calm.</span></li><li data-i="3" style="--t:#8A6E2C"><b>Radical Empathy</b><span>Acknowledging what you're feeling and why it makes sense, before testing your conclusions.</span></li><li data-i="4" style="--t:#8C7A57"><b>Holding the Mirror</b><span>Reflecting back patterns in your choices and language, without judgement.</span></li><li data-i="5" style="--t:#5A6D52"><b>Power Reclamation</b><span>Shifting your focus to what's within your control, so you can act.</span></li></ol>
     <div class="wv-art" aria-hidden="true">
       <svg viewBox="0 0 1000 576" preserveAspectRatio="none"><path class="h" pathLength="100" d="M0,48 C150,48 230,336 380,336 C520,336 600,245 780,288"/><path class="s" data-i="0" style="--c:#C39F47" d="M0,48 C150,48 230,336 380,336 C520,336 600,245 780,288"/><path class="h" pathLength="100" d="M0,144 C150,144 230,528 380,528 C520,528 600,262 780,288"/><path class="s" data-i="1" style="--c:#424741" d="M0,144 C150,144 230,528 380,528 C520,528 600,262 780,288"/><path class="h" pathLength="100" d="M0,240 C150,240 230,432 380,432 C520,432 600,279 780,288"/><path class="s" data-i="2" style="--c:#97AA8E" d="M0,240 C150,240 230,432 380,432 C520,432 600,279 780,288"/><path class="h" pathLength="100" d="M0,336 C150,336 230,144 380,144 C520,144 600,297 780,288"/><path class="s" data-i="3" style="--c:#8A6E2C" d="M0,336 C150,336 230,144 380,144 C520,144 600,297 780,288"/><path class="h" pathLength="100" d="M0,432 C150,432 230,48 380,48 C520,48 600,314 780,288"/><path class="s" data-i="4" style="--c:#B8A98A" d="M0,432 C150,432 230,48 380,48 C520,48 600,314 780,288"/><path class="h" pathLength="100" d="M0,528 C150,528 230,240 380,240 C520,240 600,331 780,288"/><path class="s" data-i="5" style="--c:#6E8166" d="M0,528 C150,528 230,240 380,240 C520,240 600,331 780,288"/></svg>
@@ -381,9 +394,8 @@ section{padding-block:clamp(64px,9vw,112px)}
     function off(){w.classList.remove('on');w.querySelectorAll('.hl').forEach(function(e){e.classList.remove('hl');});}
     li.addEventListener('mouseenter',on);li.addEventListener('mouseleave',off);li.addEventListener('focus',on);li.addEventListener('blur',off);li.tabIndex=0;});})();
   </script>
-
-  <h3 class="sub-h">Our roots</h3>
-  <div class="kete">
+    </div></details>
+    <details class="xbox"><summary><span class="xb-t">Our roots</span><span class="xb-h">The waharoa, and Ngā Kete o te Wānanga</span></summary><div class="xb-body"><div class="kete">
     <div class="story">
       <p class="waharoa">Step through the waharoa, and put the load down.</p>
       <p>The waharoa is the gateway into the marae. Those seeking sanctuary come home through it and leave their heavy load at the gate. It marks the line between the busy world outside and the calm within, and everyone is welcome through it.</p>
@@ -395,6 +407,8 @@ section{padding-block:clamp(64px,9vw,112px)}
       <div class="basket"><h3>Te Kete Tuatea</h3><p>Structure, career and systems.</p></div>
       <div class="basket"><h3>Te Kete Tuauri</h3><p>Connection, family and aroha.</p></div>
     </div>
+  </div>
+    </div></details>
   </div>
 
   <h3 class="sub-h">AHU supports you to take back your power, at your own pace.</h3>
