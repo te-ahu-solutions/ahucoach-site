@@ -283,6 +283,14 @@ section{padding-block:clamp(64px,9vw,112px)}
 .fb-item p{margin:0;max-width:66ch;color:var(--ink)}
 .fb-item p a{color:var(--gold-text)}
 @media (max-width:760px){.faq-box summary{padding:22px 56px 22px 20px}.fb-body{padding:0 20px 8px}}
+.start-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,620px);gap:28px;align-items:stretch}
+.begin{position:relative;overflow:hidden;border-radius:16px;background:var(--charcoal) url("assets/moon-on-water-2000.jpg") center/cover no-repeat;color:#fff;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;min-height:360px}
+.begin::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(53,57,52,.15),rgba(53,57,52,.85))}
+.begin > *{position:relative;margin:0}
+.begin .b-h{font-family:var(--display);font-size:clamp(28px,3vw,38px);line-height:1.15;color:#fff;max-width:12ch}
+.begin p + p{margin-top:12px;color:#E3E1D6;max-width:34ch}
+.start-col .tiers.two,.start-col .freeline,.start-col .tiernotes{max-width:none}
+@media (max-width:960px){.start-grid{grid-template-columns:1fr}.begin{min-height:260px}}
 </style>
 </head>
 <body>
@@ -402,6 +410,9 @@ section{padding-block:clamp(64px,9vw,112px)}
 
 <section id="start" aria-labelledby="h-start"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Get started</span><h2 id="h-start">Your first plan is free</h2></div>
+  <div class="start-grid">
+  <div class="begin"><p class="b-h">Begin with what matters.</p><p>You remain the author of your next step. Return to your plans whenever it feels right.</p></div>
+  <div class="start-col">
   <div class="tiers two">
     <div class="card"><h3>Monthly Membership</h3><p class="amt">$29 <small>NZD / month</small></p><p class="what">Ongoing support to turn intentions into action.</p><ul class="small"><li>Create as many Action Plans as you need, with up to three active at any time</li><li>Personalised reminders and progress check-ins</li><li>Access to exclusive member resources</li><li>Cancel anytime</li></ul><a class="btn line tierbtn" href="https://app.ahucoach.com/start?plan=monthly">Join monthly</a></div>
     <div class="card feature"><span class="badge">Best value</span><h3>Annual Membership</h3><p class="amt">$290 <small>NZD / year</small></p><p class="what">A full year of support, with more value built in.</p><ul class="small"><li>Everything included in Monthly Membership</li><li>12 months for the price of 10</li><li>Save $58 over monthly payments</li><li>Cancel your renewal anytime</li></ul><a class="btn line tierbtn" href="https://app.ahucoach.com/start?plan=annual">Join annually</a></div>
@@ -411,6 +422,8 @@ section{padding-block:clamp(64px,9vw,112px)}
     <p><b>Members:</b> Your membership begins when your first Action Plan is ready. No charge before then.</p>
     <p>Membership is currently available in New Zealand. All prices include GST.</p>
     <p><a href="https://app.ahucoach.com/notify">Outside New Zealand? Register your interest for when membership becomes available in your region.</a></p>
+  </div>
+  </div>
   </div>
 </div></section>
 
@@ -447,17 +460,6 @@ fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new For
 if(d.success){f.reset();st.textContent='Thank you. Your message is on its way.';}else{st.textContent='Sorry, that didn\'t send. Please email support@teahusolutions.com.';}
 }).catch(function(){st.textContent='Sorry, that didn\'t send. Please email support@teahusolutions.com.';}).finally(function(){b.disabled=false;});});})();
 </script>
-
-<section class="endcta" aria-labelledby="h-end"><div class="wrap">
-  <span class="eyebrow" style="color:#D9BE7A">AHU Coach</span>
-  <h2 id="h-end">Your next meaningful step starts here</h2>
-  <a class="btn gold" href="https://app.ahucoach.com/start?plan=free">Start your free plan</a>
-</div></section>
-
-<div class="close"><div class="wrap">
-  <h2>Begin with what matters.</h2>
-  <p>You remain the author of your next step. Return to your plans whenever it feels right.</p>
-</div></div>
 
 </main>
 <footer><div class="wrap">
